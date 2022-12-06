@@ -33,3 +33,20 @@
         
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+             $.ajax({
+            type: "POST",
+            url:"@Url.Action("CreateMovie")",
+            dataType: "json",
+            data:{title:"Iron Man"},
+            success: function(response) {
+                console.log(response)
+            }
+        })
+        })
+       
+    </script>
+}
